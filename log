@@ -25,3 +25,17 @@ treemap.c:48:16: error: unused variable ‘new’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 36670f6
+Mon 06 May 2024 03:24:00 PM UTC: 
+ treemap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+treemap.c: In function ‘insertTreeMap’:
+treemap.c:49:12: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+   49 |     return NULL;
+      |            ^~~~
+treemap.c:47:6: note: declared here
+   47 | void insertTreeMap(TreeMap * tree, void* key, void * value) {
+      |      ^~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+07e50b9
