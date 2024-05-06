@@ -73,27 +73,19 @@ void eraseTreeMap(TreeMap * tree, void* key){
 
 Pair * searchTreeMap(TreeMap * tree, void* key) {
     if (tree == NULL || tree->root == NULL) return NULL;
+    
     TreeNode * current = tree->root;
     while (current != NULL)
     {
-        if (is_equal(tree,current->pair->key,key))
+        if (is_equal(tree, current->pair->key, key))
         {
             tree->current = current;
             return current->pair;
         }
+        else if (tree->lower_than(current->pair->key, key))
+            current = current->right;
         else
-        {
-            if (tree->lower_than(key,current->pair->key) == 1)
-            {
-                current = current->left;
-                
-            }
-            else
-            {
-                current = current->right;
-                
-            }
-        }
+            current = current->left;
     }
     return NULL;
 }
