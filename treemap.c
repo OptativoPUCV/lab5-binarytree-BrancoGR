@@ -174,7 +174,7 @@ Pair * nextTreeMap(TreeMap * tree)
 {
     if (tree == NULL || tree->current == NULL) return NULL;
     if (tree->current->right != NULL) {
-        tree->current = minimun(tree->current->right);
+        tree->current = minimum(tree->current->right);
     }
     else {
         TreeNode *parent = tree->current->parent;
