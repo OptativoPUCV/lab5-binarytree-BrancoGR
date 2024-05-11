@@ -208,3 +208,18 @@ Sat 11 May 2024 03:49:21 PM UTC:
  tests:  20|2
 total_score: 45/70
 5ea2fd0
+Sat 11 May 2024 03:52:59 PM UTC: 
+ treemap.c | 15 +++++++++++++++
+ 1 file changed, 15 insertions(+)
+In file included from test.c:4:
+treemap.c: In function ‘nextTreeMap’:
+treemap.c:177:25: error: implicit declaration of function ‘minimun’; did you mean ‘minimum’? [-Werror=implicit-function-declaration]
+  177 |         tree->current = minimun(tree->current->right);
+      |                         ^~~~~~~
+      |                         minimum
+treemap.c:177:23: error: assignment to ‘TreeNode *’ from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+  177 |         tree->current = minimun(tree->current->right);
+      |                       ^
+cc1: all warnings being treated as errors
+Compilation failed
+dc4098a
