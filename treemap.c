@@ -70,6 +70,8 @@ void insertTreeMap(TreeMap * tree, void* key, void * value)
     else
         parent->right = new;
     new->parent = parent;
+
+    tree->current = new;
 }    
 
 TreeNode * minimum(TreeNode * x){
