@@ -117,14 +117,12 @@ void removeNode(TreeMap * tree, TreeNode* node)
         free(node);
     }
 
-    else {
+    else
+    {
         TreeNode *nodoMin = minimum(node->right);
         node->pair = nodoMin->pair;
         removeNode(tree, nodoMin);
     }
-
-
-
 }
 
 void eraseTreeMap(TreeMap * tree, void* key){
